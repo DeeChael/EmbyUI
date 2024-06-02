@@ -1,0 +1,116 @@
+plugins {
+	id 'fabric-loom' version '1.6-SNAPSHOT'
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	maven {
+		url = "https://maven.blamejared.com"
+	}
+	maven {
+		url = "https://api.modrinth.com/maven"
+	}
+	maven {
+		url = "https://cursemaven.com"
+	}
+	maven {
+		url = "https://maven.quiltmc.org/repository/release"
+	}
+	maven {
+		url = "https://minecraft.guntram.de/maven/"
+	}
+	maven {
+		url "https://maven.shedaniel.me/"
+	}
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+	mods {
+		"embyui" {
+			sourceSet sourceSets.client
+		}
+	}
+
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Cloth Config
+	modApi("me.shedaniel.cloth:cloth-config-fabric:14.0.126") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+
+	// Embeddium
+	modImplementation "org.embeddedt:embeddium-fabric-1.20.6:0.3.20-git-6d4c51a+mc1.20.6"
+
+	// Ryoamic Lights
+	modImplementation "maven.modrinth:ryoamiclights:0.2.6+mc1.20.6-fabric"
+	modImplementation "maven.modrinth:obsidianui:0.2.5+mc1.20.6-fabric"
+
+	// Continuity
+	modImplementation "maven.modrinth:continuity:3.0.0-beta.5+1.20.5"
+
+	// Dynamic FPS
+	modImplementation "maven.modrinth:dynamic-fps:3.4.3-fabric,1.20.6"
+
+	// Fabric Skyboxes Interop
+	modImplementation "maven.modrinth:fabricskyboxes:mc1.20.5-0.7.4"
+	modImplementation "maven.modrinth:fabricskyboxes-interop:mc1.20.5-1.4.0"
+
+	// Title Tweaks
+	// I have no idea why title tweaks use yacl, and the most important: I have no idea why yacl use quilt parsers!
+	implementation "org.quiltmc.parsers:json:0.2.1"
+	implementation "org.quiltmc.parsers:gson:0.2.1"
+	modImplementation "maven.modrinth:yacl:3.4.3+1.20.6-fabric"
+	modImplementation "maven.modrinth:titletweaks:1.1.2-fabric,1.20.6"
+
+	// Chunk Fade In
+	modImplementation "de.guntram.mcmod:crowdin-translate:1.4+1.19.3"
+	include "de.guntram.mcmod:crowdin-translate:1.4+1.19.3"
+	include "com.moandjiezana.toml:toml4j:0.7.2"
+	implementation "com.moandjiezana.toml:toml4j:0.7.2"
+	implementation "io.github.douira:glsl-transformer:2.0.0-pre13"
+	modImplementation "maven.modrinth:chunks-fade-in:1.0.0-1.20.3-fabric,1.20.6"
+
+	// Super Better Grass
+	modImplementation "curse.maven:super-better-grass-911433:4744836"
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.base.archivesName.get()}"}
+	}
+}

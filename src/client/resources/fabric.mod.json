@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "embyui",
+	"version": "${version}",
+	"name": "EmbyUI",
+	"description": "Embeddium options page support for many mods!",
+	"authors": [
+		"DeeChael"
+	],
+	"contact": {
+		"sources": "https://github.com/DeeChael/EmbyUI"
+	},
+	"license": "MIT",
+	"icon": "assets/embyui/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"net.deechael.embyui.EmbyUI"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*",
+		"embeddium": ">=0.3.17"
+	},
+	"breaks": {
+		"ryoamium": "*"
+	}
+}
