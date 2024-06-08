@@ -1,6 +1,6 @@
 {
   "options.embyui.general": "General",
-  "options.embyui.titletweaks.title": "Title",
+  "options.embyui.titletweaks.title": "Titles",
   "options.embyui.titletweaks.disable_titles": "Disbale Titles",
   "options.embyui.titletweaks.title_scale": "Title Scale",
   "options.embyui.titletweaks.automatically_scale_titles": "Automatically Scale Titles",
@@ -17,6 +17,7 @@
   "options.embyui.titletweaks.title_opacity.tooltip": "Set the opacity for titles.",
   "options.embyui.titletweaks.remove_text_shadow.tooltip": "Removes the text shadow from titles.",
   "options.embyui.titletweaks.clear_on_disconnect.tooltip": "Fixes a Minecraft bug where titles fail to clear upon disconnecting from a server, potentially leaving a title to be stuck on your screen.",
+  "options.embyui.chunksfadein.animations": "Animations",
   "options.embyui.chunksfadein.mod_enabled": "Mod enabled",
   "options.embyui.chunksfadein.update_notifier_enabled": "Update notifier",
   "options.embyui.chunksfadein.mod_button_enabled": "Mod button in settings",

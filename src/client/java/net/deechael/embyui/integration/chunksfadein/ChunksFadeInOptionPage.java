@@ -24,7 +24,7 @@ public class ChunksFadeInOptionPage extends OptionPage {
     public static final OptionIdentifier<Void> ID = OptionIdentifier.create(new Identifier("chunksfadein", "general"));
 
     public ChunksFadeInOptionPage() {
-        super(ID, Text.translatable("options.embyui.general"), create());
+        super(ID, Text.translatable("options.embyui.chunksfadein.animations"), create());
     }
 
     private static ImmutableList<OptionGroup> create() {
