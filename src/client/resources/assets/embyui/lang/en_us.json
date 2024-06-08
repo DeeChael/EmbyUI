@@ -37,6 +37,7 @@
   "options.embyui.chunksfadein.animation_time": "Animation time",
   "options.embyui.chunksfadein.time_unit": "%.2f sec",
   "options.embyui.fabricskyboxes.skyboxes": "Skyboxes",
+  "options.embyui.fabricskyboxes.interop": "Interop",
   "options.embyui.fabricskyboxes.enabled": "Enable Fabric Skyboxes",
   "options.embyui.fabricskyboxes.debughud": "Show Debug HUD",
   "options.embyui.lambdabettergrass.title": "Better Grass",

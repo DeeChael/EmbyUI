@@ -1,6 +1,7 @@
 package net.deechael.embyui.integration.fabricskyboxesinterop;
 
 import com.google.common.collect.ImmutableList;
+import io.github.amerebagatelle.fabricskyboxes.FabricSkyBoxesClient;
 import me.flashyreese.mods.fabricskyboxes_interop.client.config.FSBInteropConfig;
 import me.flashyreese.mods.fabricskyboxes_interop.client.config.FSBInteropMode;
 import me.jellysquid.mods.sodium.client.gui.options.OptionGroup;
@@ -17,10 +18,10 @@ import java.util.List;
 
 public class FabricSkyboxesInteropOptionPage extends OptionPage {
 
-    public static final OptionIdentifier<Void> ID = OptionIdentifier.create(new Identifier("fsb-interop", "general"));
+    public static final OptionIdentifier<Void> ID = OptionIdentifier.create(new Identifier(FabricSkyBoxesClient.MODID, "interop"));
 
     public FabricSkyboxesInteropOptionPage() {
-        super(ID, Text.translatable("options.embyui.general"), create());
+        super(ID, Text.translatable("options.embyui.fabricskyboxes.interop"), create());
     }
 
     private static ImmutableList<OptionGroup> create() {
