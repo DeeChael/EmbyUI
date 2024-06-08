@@ -3,6 +3,7 @@ package net.deechael.embyui.integration;
 import dynamic_fps.impl.PowerState;
 import me.jellysquid.mods.sodium.client.gui.options.OptionPage;
 import net.deechael.embyui.integration.chunksfadein.ChunksFadeInOptionPage;
+import net.deechael.embyui.integration.cit.CITOptionPage;
 import net.deechael.embyui.integration.continuity.ContinuityOptionPage;
 import net.deechael.embyui.integration.dynamicfps.pages.DynamicFpsGeneralPage;
 import net.deechael.embyui.integration.dynamicfps.pages.DynamicFpsPowerPage;
@@ -52,6 +53,9 @@ public final class Integrations {
         }
         if (isModPresent("lambdabettergrass")) {
             pages.add(new LambdaBetterGrassOptionPage());
+        }
+        if (isModPresent("citresewn")) {
+            pages.add(new CITOptionPage());
         }
     }
 

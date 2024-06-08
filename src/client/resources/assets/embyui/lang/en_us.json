@@ -45,5 +45,6 @@
   "options.embyui.lambdabettergrass.mode.off": "Off",
   "options.embyui.lambdabettergrass.mode.fastest": "Fastest",
   "options.embyui.lambdabettergrass.mode.fast": "Fast",
-  "options.embyui.lambdabettergrass.mode.fancy": "Fancy"
+  "options.embyui.lambdabettergrass.mode.fancy": "Fancy",
+  "options.embyui.cit.textures": "Textures"
 }

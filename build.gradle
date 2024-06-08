@@ -88,6 +88,9 @@ dependencies {
 
 	// Super Better Grass
 	modImplementation "curse.maven:super-better-grass-911433:4744836"
+
+	// CIT Resewn
+	modImplementation "maven.modrinth:cit-resewn:1.1.5+1.20.4"
 }
 
 processResources {
