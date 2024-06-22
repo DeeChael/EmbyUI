@@ -5,6 +5,7 @@ import net.deechael.embyui.integration.emf.EmfModelsOptionPage;
 import net.deechael.embyui.integration.esf.EsfSoundsOptionPage;
 import net.deechael.embyui.integration.etf.EtfMiscOptionPage;
 import net.deechael.embyui.integration.etf.EtfTexturesOptionPage;
+import net.deechael.embyui.integration.ryoamiclights.RyoamicLightsOptionPage;
 import net.neoforged.fml.ModList;
 import org.embeddedt.embeddium.api.OptionGUIConstructionEvent;
 
@@ -27,6 +28,9 @@ public class Integrations {
         }
         if (isModLoaded("cullleaves")) {
             event.addPage(new CullLeavesOptionPage());
+        }
+        if (isModLoaded("ryoamiclights")) {
+            event.addPage(new RyoamicLightsOptionPage());
         }
     }
 

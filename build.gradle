@@ -71,6 +71,7 @@ dependencies {
     implementation "maven.modrinth:esf:0.3-neoforge,1.21"
     implementation "maven.modrinth:cull-leaves:3.4.0-neoforge"
     implementation "maven.modrinth:midnightlib:1.5.7-neoforge"
+    implementation "maven.modrinth:ryoamiclights:0.2.7+mc1.21-neoforge"
 }
 
 tasks.withType(ProcessResources).configureEach {
