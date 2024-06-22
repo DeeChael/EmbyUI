@@ -56,9 +56,9 @@ public class EsfSoundsOptionPage extends OptionPage {
                         )
                         .add(
                                 OptionImpl.createBuilder(ESFConfig.EntitySearchMode.class, EsfOptionsStorage.INSTANCE)
-                                        .setId(ResourceLocation.fromNamespaceAndPath(ESF.MOD_ID, "announce"))
-                                        .setName(Component.translatable("entity_sound_features.config.announce"))
-                                        .setTooltip(Component.translatable("entity_sound_features.config.announce.tooltip"))
+                                        .setId(ResourceLocation.fromNamespaceAndPath(ESF.MOD_ID, "entity_search"))
+                                        .setName(Component.translatable("entity_sound_features.config.entity_search"))
+                                        .setTooltip(Component.translatable("entity_sound_features.config.entity_search.tooltip"))
                                         .setControl((opt) -> new CyclingControl<>(opt, ESFConfig.EntitySearchMode.class, new Component[] {
                                                 Component.translatable("entity_sound_features.config.entity_search.exact"),
                                                 Component.translatable("entity_sound_features.config.entity_search.block"),
