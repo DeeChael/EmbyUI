@@ -1,6 +1,9 @@
 package net.deechael.embyui.integration;
 
+import dynamic_fps.impl.PowerState;
 import net.deechael.embyui.integration.cullleaves.CullLeavesOptionPage;
+import net.deechael.embyui.integration.dynamicfps.pages.DynamicFpsGeneralPage;
+import net.deechael.embyui.integration.dynamicfps.pages.DynamicFpsPowerPage;
 import net.deechael.embyui.integration.emf.EmfModelsOptionPage;
 import net.deechael.embyui.integration.esf.EsfSoundsOptionPage;
 import net.deechael.embyui.integration.etf.EtfMiscOptionPage;
@@ -31,6 +34,13 @@ public class Integrations {
         }
         if (isModLoaded("ryoamiclights")) {
             event.addPage(new RyoamicLightsOptionPage());
+        }
+        if (isModLoaded("dynamic_fps")) {
+            event.addPage(new DynamicFpsGeneralPage());
+             event.addPage(new DynamicFpsPowerPage(PowerState.HOVERED));
+             event.addPage(new DynamicFpsPowerPage(PowerState.UNFOCUSED));
+             event.addPage(new DynamicFpsPowerPage(PowerState.INVISIBLE));
+             event.addPage(new DynamicFpsPowerPage(PowerState.ABANDONED));
         }
     }
 

@@ -30,6 +30,7 @@ public class RyoamicLightsOptionPage extends OptionPage {
 
         groups.add(
                 OptionGroup.createBuilder()
+                        .setId(ResourceLocation.fromNamespaceAndPath(RyoamicLights.NAMESPACE, "enabled"))
                         .add(
                                 OptionImpl.createBuilder(DynamicLightsMode.class, RyoamicLightsOptionsStorage.INSTANCE)
                                         .setId(ResourceLocation.fromNamespaceAndPath(RyoamicLights.NAMESPACE, "dynamic_lights_mode"))
@@ -57,6 +58,7 @@ public class RyoamicLightsOptionPage extends OptionPage {
 
         groups.add(
                 OptionGroup.createBuilder()
+                        .setId(ResourceLocation.fromNamespaceAndPath(RyoamicLights.NAMESPACE, "single_options"))
                         .add(
                                 OptionImpl.createBuilder(boolean.class, RyoamicLightsOptionsStorage.INSTANCE)
                                         .setId(ResourceLocation.fromNamespaceAndPath(RyoamicLights.NAMESPACE, "light_sources_entities"))

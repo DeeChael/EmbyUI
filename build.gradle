@@ -65,13 +65,25 @@ configurations {
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
+    // Embeddium
     implementation("org.embeddedt:embeddium-1.21:1.0.0-beta.1+mc1.21")
+
+    // Entity Features
     implementation "maven.modrinth:entitytexturefeatures:6.1.1-neoforge,1.21"
     implementation "maven.modrinth:entity-model-features:2.0.3-neoforge,1.21"
     implementation "maven.modrinth:esf:0.3-neoforge,1.21"
+
+    // Cull Leaves
     implementation "maven.modrinth:cull-leaves:3.4.0-neoforge"
     implementation "maven.modrinth:midnightlib:1.5.7-neoforge"
+
+    // Ryoamic Lights
     implementation "maven.modrinth:ryoamiclights:0.2.7+mc1.21-neoforge"
+    implementation "maven.modrinth:obsidianui:0.2.6+mc1.20.6-neoforge"
+
+    // Dynamic FPS
+    implementation "maven.modrinth:dynamic-fps:3.4.3-neoforge.21.0.beta.1"
+    implementation "maven.modrinth:cloth-config:15.0.127+neoforge"
 }
 
 tasks.withType(ProcessResources).configureEach {
