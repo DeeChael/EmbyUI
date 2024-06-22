@@ -11,13 +11,14 @@ import org.embeddedt.embeddium.api.options.structure.OptionImpl;
 import org.embeddedt.embeddium.api.options.structure.OptionPage;
 import traben.entity_sound_features.ESF;
 import traben.entity_sound_features.ESFConfig;
+import traben.entity_texture_features.ETF;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EsfSoundsOptionPage extends OptionPage {
 
-    public static final OptionIdentifier<Void> ID = OptionIdentifier.create(ResourceLocation.fromNamespaceAndPath(ESF.MOD_ID, "models"));
+    public static final OptionIdentifier<Void> ID = OptionIdentifier.create(ResourceLocation.fromNamespaceAndPath(ETF.MOD_ID, "models"));
 
     public EsfSoundsOptionPage() {
         super(ID, Component.translatable("options.embyui.esf.sounds"), create());
